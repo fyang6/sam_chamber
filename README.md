@@ -1,15 +1,20 @@
 # sam_chamber
 SAM-Chamber is modified from the System for Atmospheric Modeling (SAM), specifically for large-eddy simulations of a convection cloud chamber. This version includes haze-capable bin microphysics scheme developed by Yang et al. (JAMES, 2023).
 
-If SAM-Chamber is used for research purposes, please add the following statement in the acknowledgement:
+**If SAM-Chamber is used for research purposes, please add the following statement in the acknowledgement:**
+
 “The SAM model was kindly provided by Marat Khairoutdinov of Stony Brook University and is publicly available at http://rossby.msrc.sunysb.edu/SAM.html (Khairoutdinov and Randall, JAS, 2003).” 
 
-If haze-capable bin microphysics scheme is used, please give credit to 
+**If haze-capable bin microphysics scheme is used, please give credit to**
+
 “The haze-capable bin microphysics scheme was developed by Fan Yang of Brookhaven National Laboratory and is available at https://digitalcommons.mtu.edu/all-datasets/40/ (Yang et al., JAMES, 2023; Yang et al., ACP, 2025)” 
 
 Some other chamber simulations studies based on SAM-Chamber can be found in Thomas et al. (JAMES 2019), Yang et al. (JAMES, 2022), Thomas et al., (JAMES, 2023), Wang et al. (JAMES, 2024), Thomas, et al. (JAMES, 2025) and Wang et al. (PNAS, 2026) 
 
+-----------------------------------------------------------------------
+
 Reference:
+
 Khairoutdinov, M.F. and Randall, D.A., 2003. Cloud resolving modeling of the ARM summer 1997 IOP: Model formulation, results, uncertainties, and sensitivities. Journal of the Atmospheric Sciences, 60(4), pp.607-625. 
 
 Thomas, Subin, Mikhail Ovchinnikov, Fan Yang, Dennis van der Voort, Will Cantrell, Steven K. Krueger, and Raymond A. Shaw. "Scaling of an atmospheric model to simulate turbulence and cloud microphysics in the Pi Chamber." Journal of Advances in Modeling Earth Systems 11, no. 7 (2019): 1981-1994.
