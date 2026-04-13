@@ -1,0 +1,61 @@
+
+recursive subroutine old_radius_liquid_euler(r_ini,dt_int,G_pre,&
+                               supersat, afactor, bfactor,ii,jj,kk)
+! adapted from Fabian Hoffmann
+implicit none
+integer, INTENT(IN), optional :: ii, jj, kk
+real, intent(inout) :: r_ini
+real, intent(in) :: dt_int, G_pre, supersat, afactor, bfactor
+integer :: m, cc, iii
+real :: r_eul,r_eul2, r_eul_old, rel_change, dr2dt, d2r2dtdr2, f, dfdr2, r_aero 
+real :: dt_eul, t_eul, r_guess
+
+r_eul     = r_ini 
+r_eul_old = r_ini
+
+r_aero = raerosol(22) ! monodisperse aerosol
+
+dt_eul = dt_int
+
+cc = 0
+
+
+r_guess = 1.0e-5
+
+do m = 1, 500 
+
+	dr2dt = 2.0 * G_pre &
+		   * ( supersat - afactor / r_eul + bfactor / r_eul**3 ) &
+		   * r_eul / ( r_eul + r0_cor )
+	d2r2dtdr2  = G_pre & 
+		   * ( afactor * r_eul**3 - bfactor * ( 3.0 * r_eul + 2.0 * r0_cor ) & 
+		   + r_eul**3 * r0_cor * supersat ) & 
+		   / ( r_eul**4 * ( r_eul + r0_cor )**2 )
+!
+!--    To speed up the Newton-Raphson scheme, the square root is executed at every iteration
+	f   = r_eul**2 - r_ini**2 - dt_eul * dr2dt
+	dfdr2   = 1.0 - dt_eul * d2r2dtdr2 ! = 1.0 - ( 0.0 + dt_int * d2r2dtdr2 )
+
+	if ((r_eul**2 - f/dfdr2)<=0) then
+		call old_radius_liquid_euler(r_ini,dt_int/2.0e0,G_pre,&
+							   supersat, afactor, bfactor,ii,jj,kk)
+		call old_radius_liquid_euler(r_ini,dt_int/2.0e0,G_pre,&
+                               supersat, afactor, bfactor,ii,jj,kk)
+		return
+	end if
+
+	r_eul = SQRT(r_eul**2 - f/dfdr2)
+
+	rel_change = ABS( r_eul - r_eul_old ) / r_eul_old
+
+	r_eul_old  = r_eul
+
+	if (rel_change.lt.1.0e-12) then
+		exit
+	endif
+
+end do
+	r_ini = max(r_eul, r_aero)
+
+	return
+end subroutine old_radius_liquid_euler

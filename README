@@ -1,0 +1,30 @@
+SAM-Chamber (this code) is used for large-eddy simulation of a convection cloud chamber.
+
+SAM-Chamber is modified from the System for Atmospheric Modeling (SAM) model, developed by Prof. Marat Khairoutdinov from Stony Brook University, specifically for cloud chamber simulations.
+https://you.stonybrook.edu/somas/sam/
+
+The code was initially developed by Dr. Fan Yang (MTU,BNL), and then by Dr. Subin Thomas (MTU), Dr. Aaron Wang (PNNL), and Dr. Lois Thomas (MTU,BNL)
+
+If SAM-Chamber is used for research purpose, please give credit to
+"The SAM model was kindly provided by Marat Khairoutdinov of Stony Brook University and is publicly available at http://rossby.msrc.sunysb.edu/SAM.html (Khairoutdinov and Randall, JAS, 2003)."
+
+If haze-capable bin microphysics scheme is used, please give credit to
+"The haze-capable bin microphysics scheme was developed by Fan Yang of Brookhaven National Laboratory and is available at https://digitalcommons.mtu.edu/all-datasets/40/ (Yang et al., JAMES, 2023; Yang et al., ACP, 2025)"
+
+More details of the SAM-Chamber for chamber simulations can be found in Thomas et al., JAMES, 2019, Wang et al., JAMES, 2024, and Thomas et al., JAMES, 2025.
+
+Reference:
+
+Khairoutdinov, M.F. and Randall, D.A., 2003. Cloud resolving modeling of the ARM summer 1997 IOP: Model formulation, results, uncertainties, and sensitivities. Journal of the Atmospheric Sciences, 60(4), pp.607-625.
+
+Thomas, Subin, Fan Yang, Mikhail Ovchinnikov, Will Cantrell, and Raymond A. Shaw. "Scaling of turbulence and microphysics in a convection–cloud chamber of varying height." Journal of Advances in Modeling Earth Systems 15, no. 2 (2023): e2022MS003304.
+
+Yang, Fan, Fabian Hoffmann, Raymond A. Shaw, Mikhail Ovchinnikov, and Andrew M. Vogelmann. "An intercomparison of large‐eddy simulations of a convection cloud chamber using haze‐capable bin and Lagrangian cloud microphysics schemes." Journal of Advances in Modeling Earth Systems 15, no. 5 (2023): e2022MS003270.
+
+Yang, Fan, Hamed Fahandezh Sadi, Raymond A. Shaw, Fabian Hoffmann, Pei Hou, Aaron Wang, and Mikhail Ovchinnikov. "Microphysics regimes due to haze–cloud interactions: cloud oscillation and cloud collapse." Atmospheric Chemistry and Physics 25, no. 6 (2025): 3785-3806.
+
+Wang, Aaron, Mikhail Ovchinnikov, Fan Yang, Silvio Schmalfuss, and Raymond A. Shaw. "Designing a convection‐cloud chamber for collision‐coalescence using large‐eddy simulation with bin microphysics." Journal of Advances in Modeling Earth Systems 16, no. 1 (2024): e2023MS003734.
+
+Thomas, Lois, Fan Yang, Aaron Wang, Mikhail Ovchinnikov, Kyle G. Pressel, and Raymond A. Shaw. "Enhancing turbulent mixing and microphysical uniformity in a tall convection‐cloud chamber through idealized heterogeneity of boundaries." Journal of Advances in Modeling Earth Systems 17, no. 11 (2025): e2025MS005316.
+
+

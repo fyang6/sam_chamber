@@ -1,0 +1,119 @@
+&MICRO_CLBIN
+Na0 = 100.,
+ra0 = 50.0e-3,
+siga0 = 1.5,
+distype = 2,
+docoll = .false.,
+aer_type = 1,
+wall_loss_time_scale = 600.0,
+inject_aer = .true.,
+inject_aer_step = 1,
+aer_source = 0.25,
+docs = .true.,
+domono = .true.,
+ka_mono = 22
+/
+
+&SGS_TKE
+dosmagor = .false.
+/
+
+ &PARAMETERS
+
+ caseid ='pi_chamber_simulation',
+
+ nrestart = 0,
+
+ LES = .true.,
+ LAND = .true.,
+ OCEAN = .false.,
+ CNS_FLX = .false.,
+
+ doconstdz      = .true.,
+ dosgs		= .true.,
+ dodamping 	= .false.,
+ doupperbound  	= .false.,
+ docloud 	= .true.,
+ doprecip 	= .true.,
+ dolongwave	= .false.,
+ doradsimple    = .false., 
+ doshortwave	= .false.,
+ dowallx        = .true.,
+ dowally        = .true.,
+ dowallsflux    = .true.,
+ dowallmflux    = .true.,
+ dosurface 	= .true.,
+ dolargescale 	= .false.,
+ doradforcing   = .false.,
+ dosfcforcing   = .false.,
+ docoriolis 	= .false.,
+ dofplane       = .false.,
+ donudging_uv   = .false.,
+ donudging_tq   = .false.,
+
+ SFC_FLX_FXD    = .false.,
+ SFC_TAU_FXD    = .false.,
+
+ dx = 	0.0625,
+ dy = 	0.0625,
+ dz =   0.0625,
+ dt =   0.02,
+
+ dos_b = .true.,
+ dos_t = .true.,
+ dos_n = .true.,
+ dos_s = .true.,
+ dos_w = .true.,
+ dos_e = .true.,
+
+ ts_b = 300.0,
+ ts_t = 280.0,
+ ts_n = 290.0,
+ ts_s = 290.0,
+ ts_w = 290.0,
+ ts_e = 290.0,
+
+ soil_b = 1.0,
+ soil_t = 1.0,
+ soil_n = 1.0,
+ soil_s = 1.0,
+ soil_w = 1.0,
+ soil_e = 1.0,
+
+ day0 = 0.0,
+ nrad = 45,
+ doisccp = .false., 
+ domodis = .false., 
+ domisr = .false., 
+
+! nstop 	= 450000,
+ nstop 	= 180000,
+ nstat 	= 3000,
+ nprint = 3000,
+! nstop 	= 100,
+! nstat 	= 10,
+! nprint = 10,
+! 10 is for 20Hz
+!  nstat = 10,
+! 200 is for 1Hz
+!  nstat = 200,
+ nstatfrq= 1,
+ ndetout = 2,
+
+doSAMconditionals = .false.
+dosatupdnconditionals = .false.
+
+ nsave2D	= 1500,
+ nsave2Dstart	= 900000000,         ! 90000,     ! 99999999,
+ nsave2Dend	= 360000,    ! 99999999
+ save2Dbin      = .true.
+
+ nsave3D	= 50,     ! 25,         ! 15000,
+ nsave3Dstart	= 90000,         ! 90000,
+ nsave3Dend	= 360000,    ! 93000,      ! 360000,
+ save3Dbin      = .true.,
+
+ nsave3D_micro  = 50,     ! 500,        ! 15000,
+
+/ 
+
